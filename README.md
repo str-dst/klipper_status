@@ -69,3 +69,6 @@ Embedded graphics library to create beautiful UIs for any MCU, MPU and display t
 
 - [cJSON](https://github.com/DaveGamble/cJSON) by Dave Gamble  
 Ultralightweight JSON parser in ANSI C
+
+- [lodepng](https://github.com/lvandeve/lodepng) by Lode Vandevenne  
+PNG encoder and decoder in C and C++
