@@ -11,7 +11,7 @@ print state, current filename, progress bar, elapsed print time and a job thumbn
 
 ## AI use disclosure
 
-This project was built with reasonable support from Anthropics Claude LLM.
+This project was built with reasonable support from Anthropics Claude LLM.  
 Mainly because I am by no means an embedded software or C/C++ developer and my experience with LVGL is very limited.
 
 This project was mainly started as a gimmicky thing on the side, 
