@@ -50,7 +50,7 @@ Root (or membership in the `video` group) is needed for framebuffer access.
 | `MOONRAKER_HOST`        | `127.0.0.1`   | Moonraker host                   |
 | `MOONRAKER_PORT`        | `7125`        | Moonraker port                   |
 | `MOONRAKER_POLL_MS`     | `1000`        | Poll interval (ms)               |
-| `LV_LINUX_FBDEV_DEVICE` | `/dev/fb0`    | Framebuffer device node          |
+| `LV_LINUX_FBDEV_DEVICE` | `/dev/fb0`    | Framebuffer device               |
 
 Example:
 ```
