@@ -6,8 +6,8 @@ A minimal LVGL status screen for Klipper, rendered directly to a Linux
 framebuffer (`/dev/fb0`) and fed by the Moonraker API. Built for a 800x480
 panel but resolution-agnostic (the fbdev driver reads geometry from the device).
 
-Shows: nozzle + bed temperature (current/target), cooling fan speed, 
-print state, current filename, progress bar, elapsed print time and a job thumbnail.
+Shows: nozzle + bed temperature (current/target), cooling fan speed, print state, 
+current filename, elapsed and estimated remaining print time, current layer, a progress bar, and the printjob thumbnail.
 
 ## AI use disclosure
 
