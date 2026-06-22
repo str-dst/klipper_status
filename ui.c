@@ -191,8 +191,8 @@ void ui_init(void)
     lv_obj_add_flag(thumb_img, LV_OBJ_FLAG_HIDDEN);
 
     /* right column: text/progress, offset past the thumbnail (800px layout) */
-    const lv_coord_t tx = 184;        /* left edge of the text column */
-    const lv_coord_t tw = 548;        /* width of the text column     */
+    const lv_coord_t tx = 200;        /* left edge of the text column */
+    const lv_coord_t tw = 532;        /* width of the text column     */
 
     state_lbl = make_label(job, &lv_font_montserrat_36, COL_MUTED, "Connecting");
     lv_obj_align(state_lbl, LV_ALIGN_TOP_LEFT, tx, 0);

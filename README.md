@@ -1,5 +1,7 @@
 # klipper-status
 
+![](status_screen.jpg)
+
 A minimal LVGL status screen for Klipper, rendered directly to a Linux
 framebuffer (`/dev/fb0`) and fed by the Moonraker API. Built for a 800x480
 panel but resolution-agnostic (the fbdev driver reads geometry from the device).
@@ -7,7 +9,7 @@ panel but resolution-agnostic (the fbdev driver reads geometry from the device).
 Shows: nozzle + bed temperature (current/target), cooling fan speed, 
 print state, current filename, progress bar, elapsed print time and a job thumbnail.
 
-## Dependencies
+## Build Dependencies
 
 Debian/Ubuntu:
 ```
@@ -63,7 +65,8 @@ sudo MOONRAKER_HOST=192.168.1.50 ./build/klipper_status
 | `moonraker.c`  | Background poll thread (libcurl + cJSON)        |
 | `lv_conf.h`    | LVGL build config (fbdev + fonts enabled)       |
 
-## Dependencies
+## Third-party components
+
 - [LVGL](https://github.com/lvgl/lvgl) - Light and Versatile Graphics Library  
 Embedded graphics library to create beautiful UIs for any MCU, MPU and display type.
 
