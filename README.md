@@ -64,8 +64,8 @@ sudo MOONRAKER_HOST=192.168.1.50 ./build/klipper_status
 | `lv_conf.h`    | LVGL build config (fbdev + fonts enabled)       |
 
 ## Dependencies
-- [LVGL](https://github.com/lvgl/lvgl) - Light and Versatile Graphics Library
+- [LVGL](https://github.com/lvgl/lvgl) - Light and Versatile Graphics Library  
 Embedded graphics library to create beautiful UIs for any MCU, MPU and display type.
 
-- [cJSON](https://github.com/DaveGamble/cJSON) by Dave Gamble
+- [cJSON](https://github.com/DaveGamble/cJSON) by Dave Gamble  
 Ultralightweight JSON parser in ANSI C
