@@ -14,8 +14,8 @@ current filename, elapsed and estimated remaining print time, current layer, a p
 This project was built with reasonable support from Anthropics Claude LLM.  
 I am by no means an embedded software or C/C++ developer and my experience with LVGL is very limited.
 
-This project was just something that I started as a gimmick on the side at 3 in the morning.  
-Mainly because I wanted to see if I could get the display on my Flashforge AD5M 3D printer 
+I mainly started this as a gimmicky thing on the side at 3 in the morning 
+since I wanted to see if I could get the display on my Flashforge AD5M 3D printer 
 to show something useful after having installed Klipper on it and KlipperScreen just being too overkill for my usecase.
 
 ## Build Dependencies
