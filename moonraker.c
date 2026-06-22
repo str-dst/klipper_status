@@ -322,8 +322,14 @@ static void parse_into(const char *json, printer_status_t *st)
             st->layer_current = (int)get_num(info, "current_layer", 0);
             st->layer_total   = (int)get_num(info, "total_layer",   0);
         }
-        if (ds)
+        if (ds) {
             st->progress = get_num(ds, "progress", st->progress);
+            cJSON *msg = cJSON_GetObjectItemCaseSensitive(ds, "message");
+            if (cJSON_IsString(msg) && msg->valuestring)
+                snprintf(st->message, sizeof st->message, "%s", msg->valuestring);
+            else
+                st->message[0] = '\0';   /* M117 with no text clears it */
+        }
 
         /* progress-based ETA: total = elapsed / progress */
         if (st->progress > 0.001 && st->print_duration > 1.0)

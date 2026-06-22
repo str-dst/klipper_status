@@ -6,6 +6,7 @@
 /* Latest snapshot of printer status pulled from Moonraker. */
 typedef struct {
     bool   online;          /* true if the last poll succeeded            */
+    char   message[256];    /* m117 printer status message                */
     double nozzle_temp;     /* current hotend temperature  (deg C)        */
     double nozzle_target;   /* hotend target temperature   (deg C)        */
     double bed_temp;        /* current bed temperature     (deg C)        */

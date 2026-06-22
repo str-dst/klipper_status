@@ -20,6 +20,7 @@
 
 /* ---- widget handles updated each tick --------------------------------- */
 static lv_obj_t *conn_dot;
+static lv_obj_t *msg_lbl;
 static lv_obj_t *noz_val;
 static lv_obj_t *fan_val;
 static lv_obj_t *bed_val;
@@ -69,6 +70,7 @@ static void ui_tick(lv_timer_t *t)
     moonraker_get(&s);
 
     lv_obj_set_style_bg_color(conn_dot, s.online ? COL_OK : COL_ERR, 0);
+    lv_label_set_text(msg_lbl, s.message);
 
     char buf[64];
     snprintf(buf, sizeof buf, "%.0f / %.0f \xC2\xB0""C", s.nozzle_temp, s.nozzle_target);
@@ -145,14 +147,21 @@ void ui_init(void)
     /* header ---------------------------------------------------------- */
     lv_obj_t *hdr = make_label(scr, &lv_font_montserrat_28, COL_TEXT,
                                "KLIPPER STATUS");
-    lv_obj_align(hdr, LV_ALIGN_TOP_LEFT, 2, 2);
+    lv_obj_align(hdr, LV_ALIGN_TOP_LEFT, 2, 0);
 
     conn_dot = lv_obj_create(scr);
     lv_obj_set_size(conn_dot, 16, 16);
     lv_obj_set_style_radius(conn_dot, LV_RADIUS_CIRCLE, 0);
     lv_obj_set_style_border_width(conn_dot, 0, 0);
     lv_obj_set_style_bg_color(conn_dot, COL_MUTED, 0);
-    lv_obj_align(conn_dot, LV_ALIGN_TOP_RIGHT, -4, 10);
+    lv_obj_align(conn_dot, LV_ALIGN_TOP_RIGHT, -4, 6);
+
+    /* M117 status message, right-aligned just left of the status dot */
+    msg_lbl = make_label(scr, &lv_font_montserrat_24, COL_MUTED, "");
+    lv_obj_set_width(msg_lbl, 460);
+    lv_obj_set_style_text_align(msg_lbl, LV_TEXT_ALIGN_RIGHT, 0);
+    lv_label_set_long_mode(msg_lbl, LV_LABEL_LONG_DOT);
+    lv_obj_align(msg_lbl, LV_ALIGN_TOP_RIGHT, -30, 0);
 
     /* temperature + fan cards (sized by % so they fit any fb resolution) */
     const lv_coord_t card_h = 138;
