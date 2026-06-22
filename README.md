@@ -9,6 +9,15 @@ panel but resolution-agnostic (the fbdev driver reads geometry from the device).
 Shows: nozzle + bed temperature (current/target), cooling fan speed, 
 print state, current filename, progress bar, elapsed print time and a job thumbnail.
 
+## AI use disclosure
+
+This project was built with reasonable support from Anthropics Claude LLM.
+Mainly because I am by no means an embedded software or C/C++ developer and my experience with LVGL is very limited.
+
+This project was mainly started as a gimmicky thing on the side, 
+since I wanted to see if I could get the display on my Flashforge AD5M 3D printer 
+to show something useful after having installed Klipper on it.
+
 ## Build Dependencies
 
 Debian/Ubuntu:
