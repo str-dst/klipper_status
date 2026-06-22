@@ -12,11 +12,11 @@ print state, current filename, progress bar, elapsed print time and a job thumbn
 ## AI use disclosure
 
 This project was built with reasonable support from Anthropics Claude LLM.  
-Mainly because I am by no means an embedded software or C/C++ developer and my experience with LVGL is very limited.
+I am by no means an embedded software or C/C++ developer and my experience with LVGL is very limited.
 
 This project was mainly started as a gimmicky thing on the side, 
-since I wanted to see if I could get the display on my Flashforge AD5M 3D printer 
-to show something useful after having installed Klipper on it.
+mainly because I wanted to see if I could get the display on my Flashforge AD5M 3D printer 
+to show something useful after having installed Klipper on it and KlipperScreen just being too overkill for my usecase.
 
 ## Build Dependencies
 
