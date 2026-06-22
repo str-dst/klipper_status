@@ -65,15 +65,6 @@ sudo MOONRAKER_HOST=192.168.1.50 ./build/klipper_status
   `LV_LINUX_FBDEV_RENDER_MODE` to `LV_DISPLAY_RENDER_MODE_DIRECT` in `lv_conf.h`.
 - To run on boot, wrap the binary in a systemd service.
 
-## Files
-
-| File           | Role                                            |
-|----------------|-------------------------------------------------|
-| `main.c`       | LVGL init, framebuffer display, tick, main loop |
-| `ui.c` / `.h`  | Screen layout + 2 Hz refresh timer              |
-| `moonraker.c`  | Background poll thread (libcurl + cJSON)        |
-| `lv_conf.h`    | LVGL build config (fbdev + fonts enabled)       |
-
 ## Third-party components
 
 - [LVGL](https://github.com/lvgl/lvgl) - Light and Versatile Graphics Library  
